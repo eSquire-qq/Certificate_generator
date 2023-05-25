@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Мій лендінг</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js"></script>
+  <script src="index.js"></script>
+  </body>
+</head>
+
+<body class="index-body">
+  <div class="top-bar">
+    <button class="btn" onclick="window.location.href='/find'">Пошук сертифікатів</button>
+  </div>
+  <div class="container">
+    <h1>Створити сертифікат</h1>
+    <div class="form-group">
+      <label for="fullname">ПІБ:</label>
+      <input type="text" id="fullname" name="fullname" required>
+    </div>
+    <div class="form-group">
+      <label for="course">Назва курсу:</label>
+      <input type="text" id="course" name="course" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Дата отримання:</label>
+      <input type="date" id="date" name="date" required></input>
+    </div>
+    <div class="form-group">
+      <label for="teacher">Прізвище викладача:</label>
+      <input type="text" id="teacher" name="teacher" required>
+    </div>
+    <div class="form-group">
+      <label for="hours">Кількість годин:</label>
+      <input type="number" id="hours" name="hours" required></input>
+    </div>
+    </script>
+    <button type="submit" onclick="createCertificate()">Створити</button>
+  </div>
+</body>
+
+</html>

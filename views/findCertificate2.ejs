@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <title>Мій лендінг</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js"></script>
+  <script src="index.js"></script>
+  </body>
+</head>
+
+<body>
+  <div class="top-bar">
+    <button class="btn" onclick="window.location.href='/'">Створити сертифікат</button>
+  </div>
+  <div class="container">
+    <h1>Знайти сертифікат</h1>
+    <div class="form-group">
+      <label for="numberOfCertificate">Введіть номер, який знаходиться в лівому верхньому куті сертифікату:</label>
+      <form method="GET" action="/findCertificate">
+        <input type="text" id="numberOfCertificate" name="numberOfCertificate" required>
+        <button type="submit">Знайти</button>
+      </form>
+    </div>
+  </div>
+
+<% if (item === null) { %>
+  <h3 class="not-finded-massage">Сертифіката з таким номером не існує.</h3>
+<% } else { %>
+  <table>
+    <thead>
+      <tr>
+        <th>ПІБ:</th>
+        <th>Назва курсу:</th>
+        <th>Викладач:</th>
+        <th>Кількість годин:</th>
+        <th>Дата отримання:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.course %></td>
+        <td><%= item.teacher %></td>
+        <td><%= item.hours %></td>
+        <td><%= item.get_date %></td>
+      </tr>
+    </tbody>
+  </table>
+<% } %>
+<footer>
+  <div>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+
+</html>
